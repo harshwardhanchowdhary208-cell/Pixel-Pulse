@@ -24,27 +24,28 @@
       <button id="search-btn" type="submit">Search</button>
     </form>
 
-    <!-- Additional Feature 1: Quick-pick Suggestion Chips -->
+    <!-- Enhancement: Category chips wired to trigger searches -->
     <div class="category-chips">
       <span>Popular:</span>
-      <button type="button" class="chip">Nature</button>
-      <button type="button" class="chip">Architecture</button>
-      <button type="button" class="chip">Minimalism</button>
-      <button type="button" class="chip">Cyberpunk</button>
+      <button type="button" class="chip" data-query="Nature">Nature</button>
+      <button type="button" class="chip" data-query="Architecture">Architecture</button>
+      <button type="button" class="chip" data-query="Minimalism">Minimalism</button>
+      <button type="button" class="chip" data-query="Cyberpunk">Cyberpunk</button>
     </div>
   </header>
 
   <main class="main-content">
+    <!-- Enhancement: Result status & count banner -->
     <p id="status" class="status-message"></p>
 
-    <!-- Additional Feature 2: Empty-state message element -->
+    <!-- Initial Empty State -->
     <div id="empty-state" class="empty-state">
       <div class="icon">🔍</div>
       <h2>Start your visual journey</h2>
       <p>Type a keyword above or select a popular topic to browse images.</p>
     </div>
 
-    <!-- Main Grid Container for Part 2 -->
+    <!-- Main Responsive Grid Container -->
     <section id="results" class="image-grid"></section>
   </main>
 
