@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LensCraft - Discover Visuals</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="app-header">
+  <header class="app-header">
     <div class="logo-container">
       <h1>LensCraft</h1>
       <p class="tagline">Explore, discover, and collect high-definition imagery.</p>
     </div>
+    
+    <form id="search-form" class="search-box">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Search for photos, art, textures..." 
+        required 
+      />
+      <button id="search-btn" type="submit">Search</button>
+    </form>
+
+    <!-- Additional Feature 1: Quick-pick Suggestion Chips -->
+    <div class="category-chips">
+      <span>Popular:</span>
+      <button type="button" class="chip">Nature</button>
+      <button type="button" class="chip">Architecture</button>
+      <button type="button" class="chip">Minimalism</button>
+      <button type="button" class="chip">Cyberpunk</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p id="status" class="status-message"></p>
+
+    <!-- Additional Feature 2: Empty-state message element -->
+    <div id="empty-state" class="empty-state">
+      <div class="icon">🔍</div>
+      <h2>Start your visual journey</h2>
+      <p>Type a keyword above or select a popular topic to browse images.</p>
+    </div>
+
+    <!-- Main Grid Container for Part 2 -->
+    <section id="results" class="image-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
