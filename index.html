@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelPulse - Image Search</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="app-header">
-    <div class="logo-container">
-      <h1>LensCraft</h1>
-      <p class="tagline">Explore, discover, and collect high-definition imagery.</p>
-    </div>
+  <div class="container">
+    <header>
+      <h1>PixelPulse</h1>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Try: cats, galaxy, Monet...">
+        <button id="search-btn">Search</button>
+      </div>
+    </header>
+
+    <!-- Status Message (Idle, Loading, Error, Empty) -->
+    <div id="status" class="status-message">Type a word and press Search to see images.</div>
+
+    <!-- Results Grid -->
+    <main id="results-grid" class="grid"></main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
